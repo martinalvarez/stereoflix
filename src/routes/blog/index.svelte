@@ -1,5 +1,6 @@
 <script context="module">
 	export function preload({ params, query }) {
+		console.log("hello. i am index.svelte");
 		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
 			return { posts };
 		});
@@ -22,7 +23,6 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
-
 <ul>
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
