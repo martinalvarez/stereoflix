@@ -9,6 +9,7 @@ export function get(req, res, next) {
 	// the `slug` parameter is available because
 	// this file is called [slug].json.js
 	const { slug } = req.params;
+	console.log("running slug json");
 	console.log(req.params);
 
 	if (lookup.has(slug)) {
